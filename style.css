@@ -355,6 +355,7 @@ section {
 .experience__company {
   font-weight: var(--medium-font-weight);
   color: var(--text-color-alt);
+  letter-spacing: 0.11em;
 }
 
 .experience__h3 {
@@ -382,6 +383,10 @@ section {
 
   nav {
     display: block;
+  }
+
+  .experience__line {
+    transform: scaleY(1.105);
   }
 }
 
