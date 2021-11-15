@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* ============= Variables ============= */
+
+:root {
+  --header-height: 4rem;
+
+  --white-1: #f8f9faff;
+  --white-2: #e9ecefff;
+  --white-3: #dee2e6ff;
+  --grey-1: #ced4daff;
+  --grey-2: #adb5bdff;
+  --grey-3: #6c757dff;
+  --black-1: #495057ff;
+  --black-2: #343a40ff;
+  --black-3: #212529ff;
+
+  --title-color: var(--black-3);
+  --text-color: var(--black-2);
+  --body-color: var(--white-1);
+
+  --title-color-inv: var(--white-1);
+  --text-color-inv: var(--white-2);
+  --body-color-inv: var(--black-3);
+
+  --scrollbar-track: var(--white-3);
+  --scrollbar-thumb: var(--grey-3);
+  --scrollbar-thumb-hover: var(--black-1);
+  
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.875rem;
+  --small-font-size: 0.688rem;
+
+  --normal-font-weight: 400;
+  --medium-font-weight: 500;
+  --bold-font-weight: 600;
+
+  --m-1: 0.5rem;
+  --m-2: 1rem;
+  --m-3: 1.5rem;
+
+  --transition-time: .2s;
+}
+
+/* ============= Reset ============= */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a, i, div {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* ============= Base ============= */
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--normal-font-weight);
+  color: var(--text-color);
+  background-color: var(--body-color);
+}
+
+/* ============= Dark Theme ============= */
+body.dark {
+  --title-color: var(--white-1);
+  --text-color: var(--white-2);
+  --body-color: var(--black-3);
+
+  --title-color-inv: var(--black-3);
+  --text-color-inv: var(--black-2);
+  --body-color-inv: var(--white-1);
+
+  --scrollbar-track: var(--black-1);
+  --scrollbar-thumb: var(--grey-2);
+  --scrollbar-thumb-hover: var(--white-1);
+}
+
+
+/* ============= Scrollbar ============= */
+::-webkit-scrollbar {
+  width: 0.2rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ============= Nav ============= */
+nav {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  width: 100%;
+}
+
+.nav__menu {
+  visibility: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  bottom: -10rem;
+  background-color: var(--body-color);
+  transition: all var(--transition-time);
+}
+
+.nav__menu--show {
+  visibility: visible;
+  bottom: var(--header-height);
+}
+
+.nav__item {
+  padding: var(--m-2);
+}
+
+.nav__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--title-color);
+  font-weight: var(--medium-font-weight);
+}
+
+.nav__icon {
+  font-size: var(--h1-font-size);
+  padding-bottom: var(--m-2);
+}
+
+.nav__header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: var(--m-3);
+  font-weight: var(--medium-font-weight);
+  box-shadow: 0px 0px 2px 0px var(--text-color);
+  background-color: var(--body-color);
+}
+
+.nav__title {
+  flex-grow: 1;
+  font-weight: var(--medium-font-weight);
+}
+
+.nav__toggle {
+  font-size: var(--h2-font-size);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: block;
+  }
+}
+
+/* ============= Section ============= */
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--m-2);
+}
+
+.section-title {
+  font-size: var(--h1-font-size);
+  font-weight: var(--bold-font-weight);
+  color: var(--title-color);
+  padding-bottom: var(--m-1);
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ============= Resume ============= */
+.resume {
+  margin-bottom: var(--header-height);
+}
+
+/* ============= Home ============= */
+
+.home__picture {
+  height: 100px;
+  width: 100px;
+  margin-bottom: var(--m-2);
+  border-radius: 50%;
+  filter: grayscale(100%) brightness(150%);
+}
+
+.home__profession {
+  font-size: var(--h3-font-size);
+}
+
+.home__title {
+  text-transform: uppercase;
+}
+
+.home__download {
+  padding: var(--m-1);
+  margin-top: var(--m-3);
+  font-weight: var(--medium-font-weight);
+  border: 0.15rem solid var(--text-color);
+  border-radius: var(--m-1);
+  cursor: pointer;
+  user-select: none;
+  text-transform: uppercase;
+  transition: all var(--transition-time);
+}
+
+.home__download:hover {
+  color: var(--text-color-inv);
+  background-color: var(--body-color-inv);
+  border-color: var(--text-color-inv);
+}
+
+.home__theme {
+  position: absolute;
+  right: var(--m-3);
+  top: var(--m-3);
+  font-size: var(--h1-font-size);
+  cursor: pointer;
+  transition: all var(--transition-time);
+}
+
+
+@media screen and (min-width: 769px) {
+  .home__theme:hover {
+    color: var(--text-color-inv);
+  }
+}
+
+/* ============= Contact ============= */
+.contact__info {
+  display: flex;
+}
+
+.contact__info i {
+  font-size: var(--h1-font-size);
+  padding-right: var(--m-2);
+}
+
+.contact__link {
+  text-decoration: underline;
+}
