@@ -102,6 +102,13 @@ body.dark {
   --scrollbar-thumb-hover: var(--white-1);
 }
 
+body.dark .home__theme--light {
+  display: none;
+}
+
+body.dark .home__theme--dark {
+  display: block;
+}
 
 /* ============= Scrollbar ============= */
 ::-webkit-scrollbar {
@@ -262,6 +269,14 @@ section {
   transition: all var(--transition-time);
 }
 
+.home__theme--dark {
+  display: none;
+}
+
+.home__theme--light {
+  display: block;
+}
+
 /* ============= Contact ============= */
 .contact__info {
   display: flex;
@@ -316,8 +331,9 @@ section {
   border-radius: 50%;
 }
 
-/* ============= Media Queries ============= */
-.experience__items {
+/* ============= Experience & Education ============= */
+.experience__items,
+.education__items {
   position: relative;
   display: grid;
   grid-template-columns: 2rem calc(100% - 2rem);
@@ -346,16 +362,24 @@ section {
   border-left: 0.22em solid var(--text-color);
 }
 
-.experience__content {
+.experience__content,
+.education__content {
   margin-bottom: var(--m-2);
 }
 
-.experience__title {
+.experience__content:last-child,
+.education__content:last-child {
+  margin-bottom: 0;
+}
+
+.experience__title,
+.education__title {
   font-size: var(--h2-font-size);
   font-weight: var(--medium-font-weight);
 }
 
-.experience__company {
+.experience__company,
+.education__school {
   font-weight: var(--medium-font-weight);
   color: var(--text-color-alt);
   letter-spacing: 0.11em;
@@ -388,10 +412,6 @@ section {
 }
 
 @media screen and (min-width: 769px) {
-  .home__theme:hover {
-    color: var(--text-color-inv);
-  }
-
   .resume {
     display: grid;
     min-height: 100%;
@@ -411,6 +431,7 @@ section {
   }
   .resume__right section {
     align-items: flex-start;
+    padding-bottom: 0;
   }
 }
 

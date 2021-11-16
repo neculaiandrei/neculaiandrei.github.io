@@ -5,10 +5,10 @@ navToggle.addEventListener('click', () => {
   navMenu.classList.toggle('nav__menu--show');
 });
 
-const theme = document.querySelector(".home__theme");
-theme.addEventListener('click', () => {
+const theme = document.querySelectorAll(".home__theme");
+theme.forEach(t => t.addEventListener('click', () => {
   document.body.classList.toggle('dark');
-});
+}));
 
 
 const moreButtons = document.querySelectorAll(".experience__more");
