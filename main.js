@@ -58,7 +58,7 @@ document.body.addEventListener("keydown", (e) => {
       margin: 0,
       filename: "cv_andrei_neculai.pdf",
       html2canvas: {
-        scale: 1.3
+        scale: 1.7
       },
       jsPDF: { 
         format: 'a4'

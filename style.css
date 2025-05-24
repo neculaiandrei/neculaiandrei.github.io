@@ -274,8 +274,17 @@ section {
   border-radius: 50%;
 }
 
-.home__profession {
+.home__profession,
+.home__summary {
   font-size: var(--h3-font-size);
+}
+
+.home__profession {
+  font-weight: 600;
+}
+
+.home__summary {
+  text-align: center;
 }
 
 .home__title {
