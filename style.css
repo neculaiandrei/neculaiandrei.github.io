@@ -110,47 +110,6 @@ body.dark .home__theme--dark {
   display: block;
 }
 
-/* ============= Pdf ============= */
-body.pdf .experience__extra {
-  display: block;
-}
-
-body.pdf .experience__more,
-body.pdf .home__download,
-body.pdf .home__theme {
-  display: none;
-}
-
-body.pdf .resume {
-  margin: 0;
-  grid-template-columns: 1fr 2.5fr;
-}
-
-body.pdf {
-  --h1-font-size: 1rem;
-  --h2-font-size: 0.875rem;
-  --h3-font-size: 0.75rem;
-  --normal-font-size: 0.688rem;
-  --small-font-size: 0.625rem;
-
-  --m-1: 0.125rem;
-  --m-2: 0.25rem;
-  --m-3: 0.375rem;
-}
-
-body.pdf #skills .skills__list {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-body.pdf section {
-  font-size: var(--normal-font-size);
-}
-
-body.pdf .skill::before {
-  width: 0.25rem;
-  height: 0.25rem;
-}
-
 /* ============= Scrollbar ============= */
 ::-webkit-scrollbar {
   width: 0.5rem;
