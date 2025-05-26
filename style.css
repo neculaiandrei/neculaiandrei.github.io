@@ -48,6 +48,7 @@
 }
 
 /* ============= Reset ============= */
+
 * {
   box-sizing: border-box;
 }
@@ -76,6 +77,7 @@ a, i, div {
 }
 
 /* ============= Base ============= */
+
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -86,6 +88,7 @@ body {
 }
 
 /* ============= Dark Theme ============= */
+
 body.dark {
   --title-color: var(--white-1);
   --text-color: var(--white-2);
@@ -111,6 +114,7 @@ body.dark .home__theme--dark {
 }
 
 /* ============= Scrollbar ============= */
+
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -125,6 +129,7 @@ body.dark .home__theme--dark {
 }
 
 /* ============= Nav ============= */
+
 nav {
   display: none;
   position: fixed;
@@ -211,17 +216,20 @@ section {
 }
 
 /* ============= Misc ============= */
+
 .link {
   text-decoration: underline;
 }
 
 /* ============= Resume ============= */
+
 .resume {
   margin-bottom: var(--header-height);
   box-shadow: 0px 0px 2px 1px var(--text-color-alt);
 }
 
 /* ============= Home ============= */
+
 #home {
   position: relative;
 }
@@ -286,6 +294,7 @@ section {
 }
 
 /* ============= Contact ============= */
+
 .contact__info {
   display: flex;
 }
@@ -296,6 +305,7 @@ section {
 }
 
 /* ============= Skills ============= */
+
 .skills__content {
   display: grid;
   grid-template-columns: 8em 1fr;
@@ -335,6 +345,7 @@ section {
 }
 
 /* ============= Experience & Education ============= */
+
 .experience__items,
 .education__items {
   position: relative;
