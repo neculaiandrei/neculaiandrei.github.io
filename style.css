@@ -341,6 +341,7 @@ section {
   display: grid;
   grid-template-columns: 8em 1fr;
   row-gap: var(--m-1);
+  margin-bottom: var(--m-3);
 }
 
 .skills__list {
